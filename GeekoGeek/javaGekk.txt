@@ -1,0 +1,164 @@
+java is platform independent platform is a combination of operating system and architecture example(windows+Intel)
+in java when u compile a program it converts your program into intermediate code called java byte code this code can run on any platform that
+has platform specific jvm preinstalled compare with c it has simple compilation and complex running process 
+later python followed Generates intermediate code and later run by python specific virtual machines 
+3 billion users and 9 million developer it is relanguage of most popular os android it is simple when compared to c and c++(pointers they have)
+(they can use mutliple way to do one thing ex:-an non primitive type a object u can pass by reference pointer value and operator overloading  ) in java non pri are always 
+references have strict rules and the primitives are normal objects and normal variables 
+secure in java:-in c executable code run without any monitoring in java u generate intermediate byte code  and run by machine specific java virtual machine 
+it works as monitoring manager can make sure unsecure are not run on machine 
+
+-----platformIndependent
+-----popular
+-----simple
+-----secure
+-----staticallyTyped
+
+since java dont have pointers it does directly acces memory in java its only references another reason for secure 
+statically typed similar to c and c++ u need to declare variable and assign datatype but advantages are generally run faster 
+Advantages like automatic garbage collection dont worry about deallocating dynamically allocated memory index out of bound check u will get exception 
+There is better exceptional Handling there is Multithreading u cant write bad code compared to c++ 
+when u create object an example structure or class that has many items pass value to functions  also which extra over head in java non primitive are by default references 
+we have many places whre java handles issues at compile time rather  production and make code less maintainable java programs are generally more maintainable 
+so java is conisdered as most by companies 
+
+@FirstProgram
+PROGRAMS ARE portable size of integer is 4 bytes fixed 
+jdk--java development kit contains all tools require to code contains jre(jvm(2ways interpreter line by line other ways just intimeCompilation most used way)
+&java class library)& DevTools(java compiler,debugger,docgenerator)
+IDE--
+Classpath--in need it will automatically set but in notepad u need to set manually classpath is something path in os where all commands present 
+code should be located using classpath
+
+In java every code we write should be a class always collection of class 
+main function where execution begings 
+
+ /*Public*/
+// in mainMethod Public is anAccess specifier we use public so that main method is
+// accesible for everywhere when u run jvm needs to run outside class
+//static are special methods which can be called without creating object
+//    main is made static always because jvm does not want to create object of classand run this method
+//    its want to call main function
+//    void is return type of main
+//    this array of strings which are arguments of main function so when u write a
+//    function java decided to receive arguments and java decided to have arg as String
+//    so that u pass string set command line u can specify some special parameters and then
+//    application  may use this parameters
+//    args is name of array we can call it any thing
+//    System is a standard java class out is an object in this class and its object of
+//    print string which is used on standard output device
+//    println is method in print stream class so we call it on out object
+
+
+@variableAndPrimitiveDataTypes
+
+int String Float 
+different data types represent different range of data they also specify amount of memory allocate to that variable must declare datatype before declare 
+java is statically typed in java ur responsibility how memory is allocated require more effort but faster 
+
+Naming ab,AB,aBc,a1,a12,_a,a_b,ab$,$ab
+cant use keyword else do for while 
+
+Convention is camelCase(firstwordsmalllaternextwordCaptial)
+nameOfPlayer
+ageOfPlayer
+currentYear
+final int MAX_AGE=200;(for constant write variable name in uppercase multiple words separate by _)
+final int MAX_PLAYERS=100;
+
+Types of variables in java 
+Primitive(basic types like int char float double byte) & Non Primitive(objects of class may be user defined or string array)
+when u create an array u basically create an object 
+
+PrimitiveDataTypes  are stored in stack memory is used for function calls and with every function u have its local record stores local data of function 
+
+Boolean	True or False
+Byte		-128 to 127(-2^7 to 2^7-1)--8 bits small variables out of which 1bit is used for sign remaining 7 bits are used to store values 
+Signed numbers in java use compliment representation positive are used as it is doing simple decimal to binary and negative numbers use simple 2s compliment
+short		-32768 to 32767(-2^15 to 2^15-1)--16bits bigger than byte also used to represent integers 
+int        	-2147483648 to 2147483647(-2^31 to 2^31-1)--32bits 2.14billion
+long        -2^63 to 2^63-1 (-9*10^18) (even big can use Big integer) 
+float		single precison 32bit
+Double	double precison 32 bit
+char		in java char range is 16 bit bigger than c& c++ idea is to allow unicode characters (0 to 2^16-1)no sign bit ('\40000' to '\4ffff')
+
+Non Primitive Data types are always references but primaitives are normal variables 
+memory of non primitive data types always located on heap for dynamic memory allocation u get reference of dynamic in a reference variable 
+use "new" operator to create memory for non primitive datatypes 
+
+@lineObjectExplanation
+Point p1 = new Point //then memory is allocated on the heap and reference to that memory in p1
+Point p2= p1; p2 stores reference to p1
+//int x; allocates memory for an integer variable on the function called stack
+// x is not refernce memory of  x is allocated when u decalred it in a function
+
+reference means it always hold the reference of memory location where this object is stored  
+we craete variables of non primitive data type using new operator 
+members of non primitive get default values like int get 0 boolean get false float 0.0
+we acces member of non primitive data type using dot operator 
+if u dont initialise members of non primitive data type they get default value primitive get compile error 
+
+@WrapperClass
+Primitive Type     wrapper class
+char			Character
+byte			Byte
+short			Short
+int 			Integer
+long			Long
+float			Float
+double 		Double
+boolean		Boolean
+when u program in object oriented way u many times wnat to deal with objects only and thats y we have corresponding wrapper classes 
+in java generics where u can pass datatype as an argument and you can create objects of a particular data type 
+whole java collection framework where u have different collections like arraylist hashset hashmap for efficient implementation of problems 
+all these collections are generics based and except datatype as an argument java generics and collections they dont work for primitive types 
+beacuse they except a class object to be there in such cases they need wrapper class 
+ex:-create an array list of integers which holds dynamic size array i cant create in int type i can create in Integer type WHICH IS A WRAPPER CLASSS 
+
+
+
+Then y primitive java get most from c & c++ advantage is they are most effiecient if i simply want to create array of integers 
+not to dela with objects i woulod love to deal with int array or craete an array in Integer it makes object and objects meet extra overhead 
+primitive for efficiency but for many implementations and collections we use non primitive thats y they have 
+wrapper class idea wrapper class allows u to have basic types as references and class objects 
+
+@AutoBoxing_AutoUnBoxing
+autoBoxing means ur primitive type variable becomes corresponding wrapper class object int  becomes Integer 
+java caches some literal in case of small value it caches when u create more references too the same value instaead of creating new object it refer to smae literal
+
+@TypeConversion in Java
+Widening or Implicict Conversion  
+There might be lose in precision in widening but u still get values  
+byte->short->int->long->float->double->
+		 |
+		 |
+             char
+int x = 10;
+long y = x;
+float can store much as it stores exponent maximum possible value allowed in float is larger minimum possible in float is smaller than long 
+Narrowing or Explicit conversion  
+high chances of loss of data 
+Inheritance is like base class and derived class like for EX:-Base class is animal and derived class is dog.
+dog->animal possible viceversa is not possible 
+@Java Input 
+Bufferedreader is ussed to read character or sequence of characters funcs like read which reads a character and another read to reads array of characters and readline function to read a line
+Scanner is advanced method of reading input from user can read formated input diiff functions for different data Type 
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+System.in is input stream that gives stream of bytes the input stream reader converts stream of bytes into stream of characters 
+Buffered reader expects stream of characters to read data from 
+in is an object in input stream once we have character stream we read that using buffered reader 
+in java is a way to organize a software u have classes which contain relative functions and top of that u have pacakages 
+packages contains folder like structure like import java.io.*; that there is folder java which has io folder in it in that we have BufferedReader and IOException like that classess 
+the folder which has java must be in path of classpath 
+ 
+BufferrEADER VS scANNER 
+when u r using multiple threads and its  synchronize we use buffer reader  
+generally faster than scanner because generally takes time to post process for  parse the input the buffer will simply read character stream also its flexible that u can specify buffer sixe to read at a time 
+ 
+OUTPUT:-      
+System.out.println();//appends in a new line
+System.out.print();//comes in same line
+System.out.format() or System.out.printf();//Both are same mainly used for date and time float for formatting numbers
+the first parameter in this function is a format string which contains some characters and place holder 
+
