@@ -161,10 +161,12 @@ System.out.println();//appends in a new line
 System.out.print();//comes in same line
 System.out.format() or System.out.printf();//Both are same mainly used for date and time float for formatting numbers
 the first parameter in this function is a format string which contains some characters and place holder 
+
 %d is place holder for integer 
 % c is palceholder for character 
 %s is placeholder for string 
 %f is placeholder for float
 System.out.format("value of x is %d\n",x);
+
 
 
